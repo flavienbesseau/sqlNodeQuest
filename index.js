@@ -161,9 +161,9 @@ app.delete("/api/data/removemovie/:id", (req, res) => {
     (err, results) => {
       if (err) {
         console.log(err);
-        res.status(500).send("😱 Error deleting an user");
+        res.status(500).send("😱 Error deleting a Game");
       } else {
-        res.status(200).send("🎉 User deleted!");
+        res.status(200).send("🎉 Game deleted!");
       }
     }
   );
@@ -174,9 +174,9 @@ app.delete("/api/data/removemoviesfalse", (req, res) => {
   connection.query(`DELETE FROM videogame WHERE nudity = 0`, (err, results) => {
     if (err) {
       console.log(err);
-      res.status(500).send("😱 Error deleting an user");
+      res.status(500).send("😱 Error deleting games");
     } else {
-      res.status(200).send("🎉 User deleted!");
+      res.status(200).send("🎉 Game deleted!");
     }
   });
 });
